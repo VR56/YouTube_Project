@@ -1,4 +1,4 @@
-var results;
+const results;
 var startIndex = 0;
 var endIndex = 4;
 var searhText = '';

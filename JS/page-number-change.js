@@ -1,16 +1,17 @@
 function numberFieldChange() {
+    const number = 4;
     let val = document.getElementById("pageNumber").value;
     pageCount = document.getElementById("pageNumber").value;
     let signOfVal = Math.sign(val);
     if (signOfVal == 1) {
-        if (val > results.items.length / 4) {
+        if (val > results.items.length / number) {
             endIndex = results.items.length;
-            startIndex = endIndex - 4;
-            document.getElementById("pageNumber").value=results.items.length/4;
+            startIndex = endIndex - number;
+            document.getElementById("pageNumber").value=results.items.length/number;
             displayCards(results, startIndex, endIndex);
         } else {
-            endIndex = 4 * val;
-            startIndex = endIndex - 4;
+            endIndex = number * val;
+            startIndex = endIndex - number;
             displayCards(results, startIndex, endIndex);
         }
 
